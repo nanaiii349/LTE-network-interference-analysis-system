@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+body {
+   height: 100vh;/*视口的大小被分为100vh*/
+    background:linear-gradient(#aad0d1,#c3dce0);
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    align-items: center;/*弹性盒子在纵轴上居中*/
+    color: #c6fafe
+}
+.box{
+    width: 400px;
+    height: 364px;
+    background: #83afb2;
+    box-shadow: 0 15px 25px 0 #628082;
+    box-sizing: border-box;
+    padding: 40px;
+}
+.item{
+    height: 45px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 40px;
+    position: relative;
+}
+.item input {
+    width:100%;
+    height: 100%;
+    color: #fff;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.item input:focus+lable ,.item input:valid+lable{
+    top: 0px;
+    font-size: 12px;
+    transition: all 0.5 linear;
+}
+.item lable {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    transition: all 0.5s linear;
+}
+input,button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.btn{
+    padding: 10px 20px;
+    /*border: 1px solid #fff;*/
+    margin-top: 30px;
+    color: #c6fafe;
+    position:relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.btn:hover{
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 0 5px 0 #c6fafe,
+                0 0 25px 0 #c6fafe,
+                0 0 50px 0 #c6fafe,
+                0 0 100px 0 #c6fafe;
+}
+.btn>span {
+    position: absolute;
+}
+.btn>span:nth-child(1){
+    width: 100%;
+    height: 2px;
+    background: -webkit-linear-gradient(left,transparent,#c6fafe);
+    left: -100%;
+    top: 0px;
+    animation: lin1 1s linear infinite;
+}
+.btn>span:nth-child(4){
+    width: 2px;
+    height: 100%;
+    background: -webkit-linear-gradient(bottom,transparent,#c6fafe);
+    bottom: -100%;
+    left: 0px;
+    animation: lin4 1s linear infinite;
+}
+.btn>span:nth-child(2){
+    width: 2px;
+    height: 100%;
+    background: -webkit-linear-gradient(top,transparent,#c6fafe);
+    right: 0px;
+    top: -100%;
+    animation: lin2 1s linear infinite;
+}
+.btn>span:nth-child(3){
+    width: 100%;
+    height: 2px;
+    background: -webkit-linear-gradient(right,transparent,#c6fafe);
+    right: -100%;
+    bottom: 0px;
+    animation: lin3 1s linear infinite;
+}
+@keyframes lin1{
+    50%,100% {
+        left: 100%;
+    }
+}
+@keyframes lin2{
+    50%,100% {
+        top: 100%;
+    }
+}
+@keyframes lin3{
+    50%,100% {
+        right: 100%;
+    }
+}
+@keyframes lin4{
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+
